@@ -1,0 +1,23 @@
+<!--Two way binding Binding (ngModel)-->    
+Employee Title : <input type="text" name="title"  [(ngModel)] ="empObj.title" /> <br/><br/> 
+Employee First Name : <input type="text" name="fisrtName"  [(ngModel)] ="empObj.fisrtName" /> <br/><br/>
+Employee Last Name : <input type="text" name="lastName"    [(ngModel)] ="empObj.lastName" /> <br/><br/>
+
+<input type="button" (click)="AddEmployee()" value="Submit"> <br/><br/>
+
+<table style="width:80%;border: 1px solid black; border-collapse: collapse;padding: 15px;">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{ emp.title }}</td>
+            <td>{{ emp.fisrtName }}</td>
+            <td>{{ emp.lastName }}</td>
+        </tr>
+    </tbody>
+</table>
